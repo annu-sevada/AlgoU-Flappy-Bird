@@ -20,6 +20,7 @@ function initializeGame(){
 function jump(){
     if(!isGameOver){
         birdTop -= 50; // Move bird up by 50 pixels
+        bird.style.top = birdTop + "px"; // update visually
     }
 }
 
