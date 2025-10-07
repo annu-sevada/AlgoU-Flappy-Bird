@@ -4,38 +4,45 @@ body {
   padding: 0;
   background-color: #f1c2a9; /* Light brown background */
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Main game area container */
+/* Main game container */
 #game-container {
   position: relative;
   width: 400px;
   height: 600px;
-  background-color: #fff; /* White game background */
-  overflow: hidden; /* Hide elements that go outside the container */
-  margin: 0 auto; /* Center the game horizontally */
+  background-color: #fff;       /* White background */
+  border: 2px solid #000;       /* Optional border for visibility */
+  border-radius: 10px;
+  overflow: hidden;             /* Hide elements that go outside the container */
+  margin-top: 50px;
 }
 
-/* The player-controlled bird */
+/* Player-controlled bird */
 #bird {
   position: absolute;
   width: 40px;
   height: 40px;
-  margin-left: 10px;
-  background-color: #ffd700; /* Golden yellow bird */
-  border-radius: 50%; /* Make it circular */
+  left: 50px;                  /* Start horizontal position */
+  top: 250px;                  /* Start vertical position */
+  background-color: #ffd700;   /* Golden yellow bird */
+  border-radius: 50%;           /* Circular shape */
+  box-shadow: 0 0 5px #e6c200; /* Slight shadow for depth */
 }
 
-/* Pipe obstacles that the bird must avoid */
+/* Pipe obstacles */
 .pipe {
   position: absolute;
   width: 60px;
   background-color: #228b22; /* Forest green pipes */
-  outline: none;
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 10px;        /* Rounded corners */
+  box-shadow: 0 0 5px #1c661c;
 }
 
-/* Game instructions styling */
+/* Instructions below the game */
 #instructions {
   text-align: center;
   margin-top: 20px;
